@@ -1,0 +1,171 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Mode Color Definitions */
+:root {
+    --primary-color: #58a6ff; /* Lighter Blue for Links and Buttons */
+    --secondary-color: #f9826c; /* Orange for Highlights */
+    --background-color: #0d1117; /* Very Dark Gray for Background */
+    --text-color: #c9d1d9; /* Light Gray for Text */
+    --border-color: #30363d; /* Dark Gray for Borders */
+    --button-hover-color: #0366d6; /* GitHub Blue for Button Hover */
+}
+
+/* Body Styling for Dark Mode */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.5;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+body {
+    background-size: cover; /* This will ensure the image covers the entire page */
+    /* This prevents the image from repeating */
+    /* This centers the image in the page */
+    background: rgba(0, 0, 0, 0.1) url('includes/culinary splash.png') fixed;
+}
+
+body::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.7); /* Black background with 50% opacity */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+    display: inline-block;
+    margin: 10px 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Form Elements Alignment */
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Styling */
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Right align the sort button */
+.Sort-button {
+    display: flex;
+    justify-content: center; /* Aligns the button to the right */
+    width: 100%; /* Full width for effective right alignment */
+
+}
+
+/* Ensuring the dropdown aligns with the sort button */
+.dropdown {
+    position: relative;
+    clip-rule: evenodd;
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none;
+    position: absolute; /* Position relative to the parent */
+    top: 100%; /* Position it just below the parent element */
+    animation-fill-mode: backwards;
+}
+
+/* Dropdown Content Styling */
+.dropdown-content {
+    display: none;
+    background-color: var(--background-color);
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+/* Adjust the position of the dropdown relative to its parent */
+
+
+/* Show the dropdown content when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute; /* Position relative to the parent */
+    max-width: fit-content;
+    top: 100%; /* Position it just below the parent element */
+}
+
+/* Dropdown Content Links */
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Style for the select dropdown */
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-left: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
